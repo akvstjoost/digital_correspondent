@@ -1,0 +1,3 @@
+sleep 5
+cd /home/bitnami/techlab/correspondent
+sudo cpulimit -l 10 python3 server.py 0.0.0.0 10002 > stdlog 2> errlog
