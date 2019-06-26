@@ -73,7 +73,10 @@ try:
             if key.data is None:
                 accept_wrapper(key.fileobj)
             else:
-                service_connection(key, mask)
+                try:
+                    service_connection(key, mask)
+                except Exception:
+                    print("error....")
 except KeyboardInterrupt:
     print("caught keyboard interrupt, exiting")
 finally:
