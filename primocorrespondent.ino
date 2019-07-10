@@ -33,7 +33,7 @@ void connectWifi() {
     delay(10000);
   }
   Serial.println("Connected to wifi");
-  printWifiStatus();
+  //printWifiStatus();
 
 
 
@@ -48,7 +48,7 @@ void connectServer() {
   while (!client.connected()) {
 
     if (client.connect(server, 10002)) {
-      Serial.println("connected to server");
+      Serial.println("Connected to server");
     }
     else {
       Serial.print('.');
